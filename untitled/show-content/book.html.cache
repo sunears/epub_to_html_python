@@ -1,0 +1,214 @@
+timestamp: 1455113921.8205914
+
+_extend=_buf.extend;_to_str=to_str;_escape=escape; _extend(('''<!DOCTYPE html>\r
+<!--STATUS OK-->\r
+<html>\r
+ <head> \r
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> \r
+  <meta charset="UTF-8" /> \r
+  <title>''', _escape(_to_str(title)), '''</title>\r
+  <meta name="description" content="" /> \r
+  <meta name="keywords" content="佛经 注音" /> \r
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" /> \r
+  <meta name="format-detection" content="telephone=no,email=no" /> \r
+  <meta name="apple-mobile-web-app-capable" content="yes" /> \r
+  <link rel="apple-touch-icon-precomposed" href="index_files/3bf33a87e950352ac19241245443fbf2b2118b2e.jpg" /> \r
+  <link rel="apple-touch-startup-image" href="index_files/3bf33a87e950352ac19241245443fbf2b2118b2e.jpg" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/base_44d7f6e.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/floatShare_8c592b7.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/lemma-top_ba3ee27.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/wiki-mobile-other_f5247b9.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/summaryImg_5ef72c1.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/basicInfo_cad96ea.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/news_c8645cb.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/wiki-mobile-lemma_4d63110.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/wiki-mobile-lemma-wifi_2b4f0f0.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/youxuan_cb5e46d.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/bottomApp_96aa3a3.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/catalog_22831dc.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/inlink_9aa3158.css" /> \r
+  <link rel="stylesheet" type="text/css" href="index_files/layout_82c95cc.css" /> \r
+  <style type="text/css">\r
+			.card-part .summary-content p {\r
+				text-indent: 2em;\r
+			}\r
+			\r
+			.content-wrapper .para p {\r
+				margin-top: 0.1rem;\r
+				text-indent: 2em;\r
+			}\r
+			\r
+			.content-wrapper .para ruby {\r
+				font-size: 0.2rem;\r
+				line-height: 1;\r
+				font-weight: 500;\r
+			}\r
+			\r
+			.content-wrapper .para rt {\r
+				font-size: 0.1rem;\r
+			}\r
+		</style> \r
+ </head> \r
+ <body> \r
+  <!-- 顶部--> \r
+  <div id="J-pre-lemma"> \r
+  </div> \r
+  <div id="J-lemma"> \r
+   <div style="display:none;" id="J-vars" data-net="0" data-token="aad7df2218256628f058921f0d1c233e" data-sublemmas="0" data-newlemmaid="873106" data-imgsrcid="3bf33a87e950352ac19241245443fbf2b2118b2e" data-time="1454032754"></div> \r
+   <img src="index_files/3bf33a87e950352ac19241245443fbf2b2118b2e.jpg" alt="" style="width:0;height:0;position:absolute" /> \r
+   <div class="header-wrapper"> \r
+    <div class="topbar"> \r
+     <div class="tips" id="J-tips"> \r
+      <span></span> \r
+     </div> \r
+     <div class="baike-icon" id="J-baike-icon"> \r
+      <a id="J-logo" href="http://wapbaike.baidu.com/"><em class="layout-icons layout-icons_baike-logo"></em></a> \r
+     </div> \r
+     <div class="wechat-share-tip" id="J-wechat-share-tip"> \r
+      <img src="index_files/wechat-share_3a9ae2a.png" alt="" class="wechat-share" /> \r
+     </div> \r
+    </div> \r
+    <div class="top-place"> \r
+    </div> \r
+   </div> \r
+   <!-- content--> \r
+   <div class="body-wrapper"> \r
+    <div class="before-content-wrapper"> \r
+     <div data-pos="0" id="J-attach-top"></div> \r
+     <div style="height: 211px;" class="summary-img" id="J-summary-img" data-width="554" data-height="515"> \r
+      <a class="summary-link"> <img src="index_files/fm.jpg" style="height: 211px;" /> </a> \r
+     </div> \r
+     <div class="card-part"> \r
+      <div class="title-part"> \r
+       <div class="title"> \r
+        <!-- 一级--> \r
+        <span class="lemma-title">''', _escape(_to_str(lemmatitle)), '''</span>\r
+       </div> \r
+       <div class="synonym" id="J-synonym"> \r
+       </div> \r
+      </div> \r
+      <div class="summary-content"> \r
+       <!-- 具体内容--> \r
+        ''', _escape(_to_str(remarks)), '''\r
+      </div>\r
+     </div>\r\n''', ));
+for k,v in chapters.items():
+    _extend((''' <!--\r
+     	时间：2016-02-07\r
+     	描述：content-wrapper ===start===\r
+     -->\r
+     <div class="content-wrapper" data-pos="''', _escape(_to_str(k)), '''">\r
+      <div class="main-content">\r
+       <a name="u0"></a>\r
+       <a name="1" id="anchor-1"></a>\r
+       <h2 class="title-level-2"> ''', _escape(_to_str(k)), ''' </h2>\r
+       <div class="para">\r
+            ''', _escape(_to_str(v)), '''\r
+       </div>\r
+      </div>\r
+      <div class="other-content" id="J-other-content" style="display:none;"></div>\r
+     </div>\r
+     <!--\r
+     	时间：2016-02-07\r
+     	描述：content-wrapper ===end===\r
+     -->\r\n''', ));
+#endfor
+_extend(('''\r
+     <!-- 底部--> \r
+     <div class=""> \r
+      <div class="bottom-app" id="J-bottom-app" data-lemmatitle="''', _escape(_to_str(lemmatitle)), '''">\r
+       <div class="app-view" id="J-app-view"> \r
+        <ul class="app-list" id="J-app-list"></ul> \r
+       </div> \r
+      </div> \r
+      <div id="J-attach-bottom"></div> \r
+      <div class="bottomMenu"> \r
+       <div class="links"> \r
+        <a href="http://wapbaike.baidu.com/">首页</a> \r
+        <a href="http://baike.baidu.com/view/47859.htm?noadapt=1" class="no-inlink" id="J-gotoPC-bottom">电脑版</a> \r
+        <a href="http://ufosdk.baidu.com/?m=Client&amp;a=postView&amp;appid=1427&amp;activityId=3&amp;needEmail=false&amp;hasRt=true&amp;u=http://wapbaike.baidu.com/view/47859.htm&amp;placeholder=%E8%AF%B7%E7%95%99%E4%B8%8B%E6%82%A8%E7%9A%84%E5%AE%9D%E8%B4%B5%E6%84%8F%E8%A7%81%EF%BC%88%E5%A6%82%E6%9E%9C%E6%82%A8%E5%8F%91%E7%8E%B0%E8%AF%8D%E6%9D%A1%E5%86%85%E5%AE%B9%E6%9C%89%E8%AF%AF%EF%BC%8C%E5%8F%AF%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E3%80%82%EF%BC%89" id="J-feedback" class="no-inlink">反馈</a> \r
+       </div> \r
+      </div> \r
+      <div class="copyright">\r
+        愿以此功德。庄严佛净土。 上报四重恩。下济三途苦。<br/>\r
+         若有见闻者。悉发菩提心。 尽此一报身。同生极乐国。\r
+      </div> \r
+      <div class="zhidao">\r
+        更多 \r
+       <span class="lemmaTitle">注音佛经</span> 请关注\r
+       <a href="https://itunes.apple.com/cn/app/bai-du-zhi-dao-yu-yin-wen-da/id465885800?mt=8" class="link" data-bklog="9018" id="J-zhidaoDownUrl"><span class="baiduzhidao">注音佛经网</span></a> \r
+      </div> \r
+     </div> \r
+    </div> \r
+    <div class="catalog-button" id="J-catalog-button"> \r
+     <em class="layout-icons layout-icons_catalog"></em> \r
+    </div> \r
+    <!-- 菜单--> \r
+    <dl class="catalog hide"> \r
+     <dt class="catalog-title">\r
+       目录 \r
+     </dt> \r
+     <dd class="catalog-content" style="overflow-y: scroll; -webkit-overflow-scrolling: touch;" id="J-catalog-content"> \r
+      <ol style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 1ms; transform: translate(0px, 0px) translateZ(0px);" class="catalog-list"> \r
+       <li class="catalog-item level1 current" data-anchor="0" data-page="0">''', _escape(_to_str(title)), '''</li>\r\n''', ));
+for k,v in catalogs.items():
+    _extend(('''       <li class="catalog-item level1" data-anchor="''', _escape(_to_str(k)), '''" data-page="0">''', _escape(_to_str(v)), '''</li>\r\n''', ));
+#endfor
+_extend(('''      </ol> \r
+     </dd> \r
+    </dl> \r
+    <div class="model"></div> \r
+    <div class="catalog-tip" id="J-catalog-tip"> \r
+     <p class="catalog-tip-txt">轻触这里</p> \r
+     <p class="catalog-tip-txt">关闭目录</p> \r
+     <em class="layout-icons layout-icons_hand"></em> \r
+    </div> \r
+    <!-- 返回顶部--> \r
+    <div style="position: absolute;" id="J-gotop" class="gotop fixed"> \r
+     <em class="layout-icons layout-icons_go-top"></em> \r
+    </div> \r
+    <!-- menu--> \r
+    <div id="chain" class="chain"> \r
+     <div class="container"> \r
+      <div class="chain-mask"></div> \r
+      <div class="chain-con"></div> \r
+      <div class="chain-arrow"></div> \r
+     </div> \r
+    </div> \r
+    <div id="J-attach-float"></div> \r
+   </div> \r
+   <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js" type="text/javascript"></script> \r
+   <script type="text/javascript">\r
+\r
+	  $(document).ready(function() {\r
+	  	$(document).scroll(function(e) {\r
+	  		if ($(document).scrollTop() >= 100) $(\'#J-gotop\').show().css(\'position\', \'fixed\');\r
+	  		if ($(document).scrollTop() < 100) $(\'#J-gotop\').hide();\r
+	  	});\r
+	  	$(\'#J-gotop\').click(function() {\r
+	  		$(document).scrollTop(0);\r
+	  	})\r
+	  	$(\'#J-catalog-button\').click(function() {\r
+	  		$(\'body\').css(\'overflow\', \'hidden\');\r
+	  		$(".model").show();\r
+	  		$("#J-catalog-tip").css("display", "block");\r
+	  		setTimeout(function() {\r
+	  			$("#J-catalog-tip").addClass("show")\r
+	  		}, 200);\r
+	  		$(".catalog").show().removeClass("hide").addClass("show");\r
+	  	});\r
+	  	$("#J-catalog-tip").on("click", function() {\r
+	  		$(document.body).css("overflow", "visible");\r
+	  		$("#J-catalog-tip").removeClass("show").hide();\r
+	  		$(".catalog").removeClass("show").addClass("hide");\r
+	  		$(".model").fadeOut(1600);\r
+	  	});\r
+	  	$(\'[data-anchor]\').click(function() {\r
+	  		$("#J-catalog-tip").trigger(\'click\');\r
+	  		window.scroll(0, $(\'[data-pos="\' + ($(this).data(\'anchor\') + \'"]\')).position()[\'top\'] - 80);\r
+	  	});\r
+	  });\r
+     </script>\r
+  </div>  \r
+ </body>\r
+</html>''', ));

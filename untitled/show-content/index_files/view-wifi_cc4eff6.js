@@ -1,0 +1,1 @@
+var $=require("wiki-mobile-common:widget/lib/zepto/zepto.js"),nslog=require("wiki-mobile-common:widget/util/nslog.js");$(".summary-link").click(function(){nslog.q("summaryImgClick"),nslog.q("summaryImgNewClick"),nslog.q("allImgClick"),window.location.href=$(this).attr("data-href")});

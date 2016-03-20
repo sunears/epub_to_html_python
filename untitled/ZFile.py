@@ -1,0 +1,58 @@
+import zipfile
+import os.path
+import os
+class ZFile(object):
+    def __init__(self, filename, mode='r', basedir=''):
+        self.filename = filename
+        self.mode = mode
+        if self.mode in ('w', 'a'):
+            self.zfile = zipfile.ZipFile(filename, self.mode, compression=zipfile.ZIP_DEFLATED)
+            #self.zfile = zipfile.ZipFile(filename, self.mode)
+        else:
+            self.zfile = zipfile.ZipFile(filename, self.mode)
+        self.basedir = basedir
+        if not self.basedir:
+            self.basedir = os.path.dirname(filename)
+
+    def addfile(self, path, arcname=None):
+        path = path.replace('//', '/')
+        if not arcname:
+            if path.startswith(self.basedir):
+                arcname = path[len(self.basedir):]
+            else:
+                arcname = ''
+        self.zfile.write(path, arcname)
+    def addfiles(self, paths):
+        for path in paths:
+            if isinstance(path, tuple):
+                self.addfile(*path)
+            else:
+                self.addfile(path)
+    def close(self):
+        self.zfile.close()
+    def extract_to(self, path):
+        print(self.zfile.namelist())
+        for p in self.zfile.namelist():
+            print(p+" "+path)
+            self.extractx(p, path)
+    def extractx(self, filename, path):
+        if not filename.endswith('/'):
+            f = os.path.join(path, filename)
+            dir = os.path.dirname(f)
+            if not os.path.exists(dir):
+                os.makedirs(dir)
+        file=open(f,'wb')
+        file.write(self.zfile.read(filename))
+        #file(f, 'wb').write(self.zfile.read(filename))
+    def create(zfile, files):
+        z = ZFile(zfile, 'w')
+        z.addfiles(files)
+        z.close()
+    def extract(zfile, path):
+        z = ZFile(zfile)
+        z.extract_to(path)
+        z.close()
+    def __str__(self):
+        print(__name__)
+if __name__=="__main__":
+    print("this is ZFile")
