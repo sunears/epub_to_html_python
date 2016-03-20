@@ -58,6 +58,7 @@ class HandDicm(object):
         return
     def mkdir(self,dirname):
         if not os.path.isdir(dirname):
+            # print(os.path.split(dirname))
             os.mkdir(dirname)
             print("mkdir "+dirname)
             # self.add_dirname_to_list(dirname)
@@ -66,11 +67,13 @@ class HandDicm(object):
         for root,dirnames,filenames in os.walk(dirname):
             for filename in filenames:
                 abs_file=os.path.join(root,filename)
-                print(abs_file)
+                print("abs_file is "+abs_file)
                 parent_dirname=os.path.dirname(abs_file)
-                print(os.path.dirname(abs_file))
-                if self.the_first_str_is_match(filename):
-                    self.mkdir(os.path.join(parent_dirname,self.get_the_first_str(filename)))
+                print("parent_dirname is "+parent_dirname)
+                print(os.path.split(parent_dirname))
+                if not self.the_first_str_is_match(os.path.split(parent_dirname)[-1]) and self.the_first_str_is_match(filename):
+                    want_create_dir=os.path.join(parent_dirname,self.get_the_first_str(filename))
+                    self.mkdir(want_create_dir)
         return
     def move(self,dirname):
         for root,dirnames,filenames in os.walk(dirname):
@@ -87,9 +90,10 @@ class HandDicm(object):
             for v in os.listdir(pdir):
                 if os.path.isfile(os.path.join(pdir,v)) and self.the_first_str_is_match(v):
                     want_to_dir=os.path.join(pdir,self.get_the_first_str(v))
-                    if os.path.isdir(want_to_dir):
-                        print(want_to_dir)
-                        shutil.move(os.path.join(pdir,v),want_to_dir)
+                    if os.path.exists(want_to_dir):
+                        if os.path.isdir(want_to_dir):
+                            print(want_to_dir)
+                            shutil.move(os.path.join(pdir,v),want_to_dir)
                 # print(os.path.isdir(os.path.join(pdir,v)))
                 # print("yes  "+v)
         return
