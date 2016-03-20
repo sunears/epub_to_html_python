@@ -2,6 +2,7 @@ import sys
 import time
 import re
 import os
+import shutil
 class HandDicm(object):
     #re_the_first_match="\d{4}\d{2}\d{2}"
     re_the_first_match="\d{4}(((0[1-9])|(1[0-2])))(((0[1-9])|([1-2][0-9])|(3[0-1])))"
@@ -32,7 +33,7 @@ class HandDicm(object):
         return False
     def add_dirname_to_list(self,dirname):
         if not dirname in self.list_dirs:
-            self.list_dirs.extend(dirname)
+            self.list_dirs.append(dirname)
         return
     def get_file_datetime(self,filename):
         if os.path.isfile(filename):
@@ -55,8 +56,47 @@ class HandDicm(object):
                 else:
                     print("not renamed "+old_file)
         return
+    def mkdir(self,dirname):
+        if not os.path.isdir(dirname):
+            os.mkdir(dirname)
+            print("mkdir "+dirname)
+            # self.add_dirname_to_list(dirname)
+        return
+    def create_dir(self,dirname):
+        for root,dirnames,filenames in os.walk(dirname):
+            for filename in filenames:
+                abs_file=os.path.join(root,filename)
+                print(abs_file)
+                parent_dirname=os.path.dirname(abs_file)
+                print(os.path.dirname(abs_file))
+                if self.the_first_str_is_match(filename):
+                    self.mkdir(os.path.join(parent_dirname,self.get_the_first_str(filename)))
+        return
+    def move(self,dirname):
+        for root,dirnames,filenames in os.walk(dirname):
+            for dirname in dirnames:
+                abs_dir=os.path.join(root,dirname)
+                # print(abs_dir)
+                # parent_dirname=os.path.dirname(abs_dir)
+                # print(parent_dirname)
+                self.move_to_dir(abs_dir)
+        return
+    def move_to_dir(self,dirname):
+        if os.path.isdir(dirname):
+            pdir=os.path.dirname(dirname)
+            for v in os.listdir(pdir):
+                if os.path.isfile(os.path.join(pdir,v)) and self.the_first_str_is_match(v):
+                    want_to_dir=os.path.join(pdir,self.get_the_first_str(v))
+                    if os.path.isdir(want_to_dir):
+                        print(want_to_dir)
+                        shutil.move(os.path.join(pdir,v),want_to_dir)
+                # print(os.path.isdir(os.path.join(pdir,v)))
+                # print("yes  "+v)
+        return
     def handle_dicm_main(self,dirname):
         self.rename_file(dirname)
+        self.create_dir(dirname)
+        self.move(dirname)
         return
 def test():
     hd = HandDicm()
