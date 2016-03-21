@@ -97,14 +97,25 @@ class HandDicm(object):
                 # print(os.path.isdir(os.path.join(pdir,v)))
                 # print("yes  "+v)
         return
+    def move_to_root(self,root):
+        for root,dirnames,filenames in os.walk(root):
+            for filename in filenames:
+                old_file=os.path.join(root,filename)
+                if os.path.isfile(old_file):
+                    shutil.move(old_file,os.path.dirname(os.path.join(root)))
+                    print(old_file+" to ====>" +os.path.dirname(os.path.join(root)))
     def handle_dicm_main(self,dirname):
         self.rename_file(dirname)
         self.create_dir(dirname)
         self.move(dirname)
         return
+
+
 def test():
     hd = HandDicm()
-    hd.handle_dicm_main(sys.argv[1])
+    # hd.handle_dicm_main(sys.argv[1])
+    hd.move_to_root(sys.argv[1])
 if __name__ == "__main__":
+    sys.argv.append("f:/phonebk/iphonebak/DCIM/860OKMZO")
     test()
     # print(sys.argv[0])

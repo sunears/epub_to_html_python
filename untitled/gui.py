@@ -21,5 +21,6 @@ frmMain = Tk()
 
 label = Label(frmMain, text="Welcome to py2exe!")
 label.pack()
-
+button = Button(frmMain,text="this is a button")
+button.pack()
 frmMain.mainloop()
