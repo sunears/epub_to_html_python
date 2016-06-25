@@ -7,13 +7,15 @@ import re
 def outRuby(list1,list2):
     print(len(list1))
     print(len(list2))
-
+    prelengthzi=0
     for vzi in list1:
         vpy=list2[list1.index(vzi)]
         vpy_array=vpy.split("|")
         # print(vzi+vpy+" 对比"+str(len(vzi))+":"+len(vpy.split("|")).__str__())
         if len(vzi)==len(vpy_array):
-            if len(vzi)<14 and prelengthzi<14:
+            if list1.index(vzi)>0:
+                prelengthzi=len(list1[list1.index(vzi)-1])
+            if len(vzi)<=14 and prelengthzi<14:
                 print("<p>")
             for i in range(0,len(vzi)):
                 if(len(vpy_array[i].strip())!=0):
